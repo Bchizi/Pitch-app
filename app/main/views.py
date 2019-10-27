@@ -13,6 +13,5 @@ def index():
 @main.route('/pitch/comments/new/<int:id>', methods = ['GET','POST'])
 @login_required
 def comment(id):
-    pass    
-
+    
 
