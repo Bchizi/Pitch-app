@@ -2,22 +2,27 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 
-                <a class="navbar-brand nav-link btn btn-outline-white " href="/" style="color:white; font-weight:bolder; ">
+                <a class="navbar-brand nav-link btn btn-outline-primary " href="/" style="color:white; font-weight:bolder; ">
                     <span class="glyphicon glyphicon-home"></span> Home
                 </a>
             </div>
             <div>
                 <ul class="nav navbar-nav navbar-right mr-auto">
                     {% if current_user.is_authenticated %}
-                    <li><a class="navbar-brand nav-link btn btn-outline-white" href="{{url_for('main.profile',uname=current_user.username)}}" style="color:white; font-weight:bolder;margin-left: 1250px ">Profile</a></li>
-                    <li><a class="navbar-brand nav-link btn btn-outline-white" href="{{url_for('main.profile',uname=current_user.username)}}" style="color:white; font-weight:bolder; margin-left: 30px">{{current_user.username}}</a></li>
-                    <li><a class="navbar-brand nav-link btn btn-outline-white" href="{{url_for('auth.logout')}}" style="color:white; font-weight:bolder; margin-left: 30px">Sign out</a></li>
+                    <li><a class="navbar-brand nav-link btn btn-outline-primary" href="{{url_for('auth.logout')}}" style="color:white; font-weight:bolder; margin-left: 30px; border-radius:5px">Sign out</a></li>
+                    <li><a class="navbar-brand nav-link btn btn-outline-primary" href="{{url_for('main.profile',uname=current_user.username)}}" style="color:white; font-weight:bolder;margin-left: 1250px; border-radius:5px">Profile</a></li>
+                    <li><a class="navbar-brand nav-link btn btn-outline-primary" href="{{url_for('main.profile',uname=current_user.username)}}" style="color:white; font-weight:bolder; margin-left: 30px">{{current_user.username}}</a></li>
                     {% else %}
-                    <li><a class="navbar-brand nav-link btn btn-outline-white" href="{{url_for('auth.login')}}" style="color:white; font-weight:bolder;">Log in</a></li>
-                    <li><a class="navbar-brand nav-link btn btn-outline-white" href="{{url_for('auth.register')}}" style="color:white; font-weight:bolder;">Sign Up</a></li>
+                    <li><a class="navbar-brand nav-link btn btn-outline-primary" href="{{url_for('auth.login')}}" style="color:white; font-weight:bolder;border-radius:5px">Log in</a></li>
+                    <li><a class="navbar-brand nav-link btn btn-outline-primary" href="{{url_for('auth.register')}}" style="color:white; font-weight:bolder;border-radius:5px">Sign Up</a></li>
                     {%endif%}
                 </ul>
             </div>
             
         </div>
     </div>
+
+
+
+      
+        

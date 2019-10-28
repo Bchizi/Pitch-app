@@ -1,1 +1,39 @@
-<h1> {{ hello }} </h1>
+!-- {% extends 'layout.html'%}
+{% import 'macros.html' as macro%}
+
+{% block styles%}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container" style="display: flex; align-items: center;justify-content: center;" >
+    <br>
+    <div class="col-lg-4 col-md-12 mb-4">
+        <div class="card mdb-color text-center z-depth-2" style=" height:300px; border-radius: 20px;   ">
+            <div class="card-body" >
+
+
+                <h3 class="text-uppercase font-weight-bold cyan-text mt-2 mb-3"><strong>CATEGORY</strong></h3>
+
+                <button class="btn aqua-gradient" style="border-radius:10px; border-color:black; border-style: solid;border-width: thick;">
+                    <a href="{{url_for('main.interview')}}" style=" color: black;">Interview Pitches</a>
+                </button>
+                <br>
+                <button class="btn aqua-gradient" style="border-radius: 10px; border-color:black; border-style: solid;border-width: thick;">
+                    <a href="{{url_for('main.promotion')}}" style="  color: black;">Promotion Pitches</a>
+                </button>
+                <br>
+                <button class="btn aqua-gradient" style="border-radius: 10px; border-color:black;   border-style: solid;border-width: thick;">
+                    <a href="{{url_for('main.product')}}" style=" color: black;">Product Pitches</a>
+                </button>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

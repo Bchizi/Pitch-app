@@ -1,0 +1,21 @@
+
+
+{% extends 'layout.html' %}
+{% import 'macros.html' as macro %}
+
+{%block content%}
+<div class="jumbotron">
+        <h1 style="text-align: center">Product Pitches</h1>
+        <a href="{{url_for('main.new_pitch')}}">
+            <br>
+            Add a new Pitch
+        </a>
+    </div>
+    <div>
+        {{macro.displayPitchesInCategories(pitches,4)}}
+    </div>
+{%endblock%}
+
+
+
+
