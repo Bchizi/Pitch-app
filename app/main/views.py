@@ -23,7 +23,7 @@ def index():
 #this section consist of the category root functions
 
 @main.route('/interview/pitches/')
-def interview():
+def quote():
     '''
     View root page function that returns the index page and its data
     '''
@@ -33,7 +33,7 @@ def interview():
 
 
 @main.route('/promotion/pitches/')
-def promotion():
+def poem():
     '''
     View root page function that returns the index page and its data
     '''
