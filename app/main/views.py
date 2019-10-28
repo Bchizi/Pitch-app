@@ -22,17 +22,17 @@ def index():
 
 #this section consist of the category root functions
 
-@main.route('/interview/pitches/')
+@main.route('/quote/pitches/')
 def quote():
     '''
     View root page function that returns the index page and its data
     '''
     pitches= Pitch.get_all_pitches()
     title = 'Home - Welcome to The best Pitching Website Online'  
-    return render_template('interview.html', title = title, pitches= pitches )
+    return render_template('quote.html', title = title, pitches= pitches )
 
 
-@main.route('/promotion/pitches/')
+@main.route('/poem/pitches/')
 def poem():
     '''
     View root page function that returns the index page and its data
@@ -41,7 +41,7 @@ def poem():
 
     pitches= Pitch.get_all_pitches()
 
-    return render_template('promotion.html', title = title, pitches= pitches )
+    return render_template('poem.html', title = title, pitches= pitches )
 
 
 @main.route('/product/pitches/')
